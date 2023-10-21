@@ -11,6 +11,6 @@ public class FavoriteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
-        Button button;
+        Button button = findViewById(R.id.btn);
     }
 }
