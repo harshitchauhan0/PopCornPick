@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,7 +34,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private NestedScrollView scrollView;
     private ProgressBar progressBar;
-    private TextView titletext,movieRatetext,movieTimetext,movieDatetext,movieSummaryInfo,movieActorInfo;
+    private TextView titletext,movieRatetext,movieTimetext,movieDatetext,movieSummaryInfo,movieActorInfo,movieHomepageLink;
     private ImageView pic2,backImg;
     private ShapeableImageView pic1;
     private int movieID;
@@ -69,6 +70,7 @@ public class DetailActivity extends AppCompatActivity {
                         movieRatetext.setText(String.format("%.2f",detail.getVoteAverage()));
                         movieTimetext.setText(""+detail.getRuntime());
                         movieDatetext.setText(detail.getReleaseDate());
+                        movieHomepageLink.setText(detail.getHomepage());
                         movieSummaryInfo.setText(detail.getOverview());
                         List<Genre> list = detail.getGenres();
                         StringBuilder s = new StringBuilder();
@@ -94,6 +96,13 @@ public class DetailActivity extends AppCompatActivity {
                 Log.v("TAG","This is the problem from failure "+t.getMessage());
             }
         });
+
+        movieHomepageLink.setOnClickListener(v->{
+            String url = movieHomepageLink.getText().toString();
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+        });
     }
 
     public void initView(){
@@ -108,6 +117,7 @@ public class DetailActivity extends AppCompatActivity {
         movieTimetext = findViewById(R.id.movieTimetxt);
         movieActorInfo = findViewById(R.id.movieActionInfo);
         backImg = findViewById(R.id.backimg);
+        movieHomepageLink = findViewById(R.id.movieHomepageLink);
         recyclerView = findViewById(R.id.imageRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         backImg.setOnClickListener(v->finish());

@@ -1,9 +1,11 @@
-package com.harshit.popcornpick;
+package com.harshit.popcornpick.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.harshit.popcornpick.R;
 
 public class FavoriteActivity extends AppCompatActivity {
 
@@ -11,6 +13,6 @@ public class FavoriteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
-        Button button = findViewById(R.id.btn);
+
     }
 }

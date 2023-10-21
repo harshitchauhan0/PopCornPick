@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.harshit.popcornpick.Activity.DetailActivity;
 import com.harshit.popcornpick.Adapter.MyRecyclerViewAdapter;
@@ -21,6 +22,7 @@ import java.util.List;
 public class SearchActivity extends AppCompatActivity implements OnMovieListener {
     RecyclerView recyclerView;
     MyRecyclerViewAdapter myRecyclerViewAdapter;
+    ImageView backFromSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,8 @@ public class SearchActivity extends AppCompatActivity implements OnMovieListener
         recyclerView = findViewById(R.id.search_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(myRecyclerViewAdapter);
+        backFromSearch = findViewById(R.id.backfromsearchimg);
+        backFromSearch.setOnClickListener(v->finish());
     }
 
     @Override
