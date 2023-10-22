@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.harshit.popcornpick.Adapter.MyRecyclerViewAdapter;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements OnMovieListener{
     private RecyclerView recyclerViewNewMovies,recyclerViewPopularMovies;
     private ProgressBar loading1,loading2;
     private MovieViewModel movieViewModel;
+
+    private ImageView favouriteBTN;
     private MyRecyclerViewAdapter recyclerPopularViewAdapter,recyclerNewViewAdapter;
     private static final boolean POPULAR_ADAPTER = true;
     private static final boolean Trending_ADAPTER = false;
@@ -105,7 +108,11 @@ public class MainActivity extends AppCompatActivity implements OnMovieListener{
                 return false;
             }
         });
-
+        favouriteBTN = findViewById(R.id.imageView3);
+        favouriteBTN.setOnClickListener(v->{
+            Intent i = new Intent(MainActivity.this, FavoriteActivity.class);
+            startActivity(i);
+        });
     }
 
     private void GetData(){

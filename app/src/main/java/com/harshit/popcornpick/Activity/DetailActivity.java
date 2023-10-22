@@ -35,7 +35,7 @@ public class DetailActivity extends AppCompatActivity {
     private NestedScrollView scrollView;
     private ProgressBar progressBar;
     private TextView titletext,movieRatetext,movieTimetext,movieDatetext,movieSummaryInfo,movieActorInfo,movieHomepageLink;
-    private ImageView pic2,backImg;
+    private ImageView pic2,backImg,favoriteIMG;
     private ShapeableImageView pic1;
     private int movieID;
     private RecyclerView recyclerView;
@@ -50,6 +50,11 @@ public class DetailActivity extends AppCompatActivity {
             movieID = i.getIntExtra("movie",0);
         }
         fetchMovie();
+        favoriteIMG.setOnClickListener(v->{
+            // ADD FAVORITE FROM HERE
+
+        });
+
 
     }
 
@@ -121,6 +126,8 @@ public class DetailActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.imageRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         backImg.setOnClickListener(v->finish());
+        favoriteIMG  = findViewById(R.id.imageView9);
+
     }
 
 
