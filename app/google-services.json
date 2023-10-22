@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "57021829464",
+    "project_id": "popcornpick-600c9",
+    "storage_bucket": "popcornpick-600c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57021829464:android:63f9998fefcd5fe2c1952d",
+        "android_client_info": {
+          "package_name": "com.harshit.popcornpick"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtgQl1bCL0grwV35oPPiBCft2eE2QkFQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

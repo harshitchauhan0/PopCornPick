@@ -194,7 +194,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:src="@drawable/baseline_person_24"
+                    android:src="@drawable/baseline_logout_24"
                     app:tint="#F3F3F3" />
 
             </LinearLayout>

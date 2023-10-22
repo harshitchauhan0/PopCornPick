@@ -14,7 +14,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.harshit.popcornpick.Adapter.MyRecyclerViewAdapter;
 import com.harshit.popcornpick.Adapter.OnMovieListener;
 import com.harshit.popcornpick.Domain.MovieModel;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements OnMovieListener{
     private ProgressBar loading1,loading2;
     private MovieViewModel movieViewModel;
 
-    private ImageView favouriteBTN;
+    private ImageView favouriteBTN,logoutBTN;
     private MyRecyclerViewAdapter recyclerPopularViewAdapter,recyclerNewViewAdapter;
     private static final boolean POPULAR_ADAPTER = true;
     private static final boolean Trending_ADAPTER = false;
@@ -48,7 +50,12 @@ public class MainActivity extends AppCompatActivity implements OnMovieListener{
     }
 
     private void initView(){
-
+        logoutBTN = findViewById(R.id.imageView6);
+        logoutBTN.setOnClickListener(v->{
+            FirebaseAuth.getInstance().signOut();
+            Toast.makeText(getApplicationContext(),"Logged out",Toast.LENGTH_LONG).show();
+            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+        });
         recyclerViewNewMovies = findViewById(R.id.view1);
         recyclerViewNewMovies.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerViewPopularMovies = findViewById(R.id.view2);

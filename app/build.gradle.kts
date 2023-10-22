@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -55,4 +56,6 @@ dependencies {
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
     implementation("com.google.android.material:material:1.11.0-alpha03")
+
+    implementation("com.google.firebase:firebase-auth:22.2.0")
 }

@@ -17,7 +17,7 @@ public class IntroductionActivity extends AppCompatActivity {
 
         AppCompatButton button =findViewById(R.id.getIN);
         button.setOnClickListener(v->{
-            Intent i = new Intent(IntroductionActivity.this,MainActivity.class);
+            Intent i = new Intent(IntroductionActivity.this,LoginActivity.class);
             startActivity(i);
         });
     }

@@ -53,6 +53,8 @@ public class FavoriteActivity extends AppCompatActivity implements OnMovieListen
 
     private void GetIFromDB() {
         // GETTING ID'S FROM DB
+
+
     }
 
     private void initView() {
