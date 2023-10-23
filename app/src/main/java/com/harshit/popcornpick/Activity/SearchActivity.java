@@ -9,11 +9,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.harshit.popcornpick.Activity.DetailActivity;
 import com.harshit.popcornpick.Adapter.MyRecyclerViewAdapter;
 import com.harshit.popcornpick.Adapter.OnMovieListener;
-import com.harshit.popcornpick.Domain.MovieModel;
-import com.harshit.popcornpick.Domain.MovieModelList;
+import com.harshit.popcornpick.EntityAndDb.MovieModel;
+import com.harshit.popcornpick.EntityAndDb.MovieModelList;
 import com.harshit.popcornpick.R;
 
 import java.util.ArrayList;

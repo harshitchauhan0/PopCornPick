@@ -1,7 +1,7 @@
 package com.harshit.popcornpick.ViewModelRepository;
 import android.util.Log;
 import androidx.lifecycle.LiveData;
-import com.harshit.popcornpick.Domain.MovieModel;
+import com.harshit.popcornpick.EntityAndDb.MovieModel;
 import com.harshit.popcornpick.Helper.MovieClient;
 import java.util.List;
 public class MovieRepository {

@@ -1,9 +1,8 @@
-package com.harshit.popcornpick.Domain;
+package com.harshit.popcornpick.EntityAndDb;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.harshit.popcornpick.Domain.MovieModel;
 
 public class MovieResponse {
 

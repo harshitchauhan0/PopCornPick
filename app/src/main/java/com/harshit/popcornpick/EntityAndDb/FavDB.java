@@ -1,4 +1,4 @@
-package com.harshit.popcornpick.Domain;
+package com.harshit.popcornpick.EntityAndDb;
 
 import android.content.Context;
 

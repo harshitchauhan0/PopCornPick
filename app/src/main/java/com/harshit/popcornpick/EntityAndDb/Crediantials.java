@@ -1,4 +1,4 @@
-package com.harshit.popcornpick.Domain;
+package com.harshit.popcornpick.EntityAndDb;
 
 public class Crediantials{
     public static final String BASE_URL = "https://api.themoviedb.org";

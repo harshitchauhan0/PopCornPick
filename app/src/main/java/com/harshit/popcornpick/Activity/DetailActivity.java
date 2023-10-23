@@ -16,13 +16,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.imageview.ShapeableImageView;
-import com.harshit.popcornpick.Domain.Crediantials;
-import com.harshit.popcornpick.Domain.Detail;
-import com.harshit.popcornpick.Domain.FavDB;
-import com.harshit.popcornpick.Domain.FavEntity;
-import com.harshit.popcornpick.Domain.Genre;
-import com.harshit.popcornpick.Domain.MovieModel;
-import com.harshit.popcornpick.Helper.AppExecutors;
+import com.harshit.popcornpick.EntityAndDb.Crediantials;
+import com.harshit.popcornpick.EntityAndDb.Detail;
+import com.harshit.popcornpick.EntityAndDb.FavDB;
+import com.harshit.popcornpick.EntityAndDb.FavEntity;
+import com.harshit.popcornpick.EntityAndDb.Genre;
 import com.harshit.popcornpick.Helper.SingeltonRetrofit;
 import com.harshit.popcornpick.R;
 

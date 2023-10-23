@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.harshit.popcornpick.Domain.MovieModel;
+import com.harshit.popcornpick.EntityAndDb.MovieModel;
 import com.harshit.popcornpick.R;
 
 import java.util.ArrayList;

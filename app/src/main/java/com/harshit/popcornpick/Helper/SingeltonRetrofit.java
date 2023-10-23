@@ -1,7 +1,6 @@
 package com.harshit.popcornpick.Helper;
 
-import com.harshit.popcornpick.Domain.Crediantials;
-import com.harshit.popcornpick.R;
+import com.harshit.popcornpick.EntityAndDb.Crediantials;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

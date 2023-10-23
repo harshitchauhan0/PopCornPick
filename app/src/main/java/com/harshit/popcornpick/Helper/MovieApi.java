@@ -1,7 +1,7 @@
 package com.harshit.popcornpick.Helper;
 
-import com.harshit.popcornpick.Domain.Detail;
-import com.harshit.popcornpick.Domain.MovieResponse;
+import com.harshit.popcornpick.EntityAndDb.Detail;
+import com.harshit.popcornpick.EntityAndDb.MovieResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

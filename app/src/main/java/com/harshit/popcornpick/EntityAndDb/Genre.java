@@ -1,4 +1,4 @@
-package com.harshit.popcornpick.Domain;
+package com.harshit.popcornpick.EntityAndDb;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

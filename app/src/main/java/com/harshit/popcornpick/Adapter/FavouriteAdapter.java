@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.harshit.popcornpick.Domain.Detail;
+import com.harshit.popcornpick.EntityAndDb.Detail;
 import com.harshit.popcornpick.R;
 
 import java.util.ArrayList;

@@ -19,8 +19,8 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.harshit.popcornpick.Adapter.MyRecyclerViewAdapter;
 import com.harshit.popcornpick.Adapter.OnMovieListener;
-import com.harshit.popcornpick.Domain.MovieModel;
-import com.harshit.popcornpick.Domain.MovieModelList;
+import com.harshit.popcornpick.EntityAndDb.MovieModel;
+import com.harshit.popcornpick.EntityAndDb.MovieModelList;
 import com.harshit.popcornpick.R;
 import com.harshit.popcornpick.ViewModelRepository.MovieViewModel;
 

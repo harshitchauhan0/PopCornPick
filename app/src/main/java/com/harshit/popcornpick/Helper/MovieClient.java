@@ -5,9 +5,9 @@ import android.util.Log;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.harshit.popcornpick.Domain.Crediantials;
-import com.harshit.popcornpick.Domain.MovieModel;
-import com.harshit.popcornpick.Domain.MovieResponse;
+import com.harshit.popcornpick.EntityAndDb.Crediantials;
+import com.harshit.popcornpick.EntityAndDb.MovieModel;
+import com.harshit.popcornpick.EntityAndDb.MovieResponse;
 
 import java.io.IOException;
 import java.util.ArrayList;

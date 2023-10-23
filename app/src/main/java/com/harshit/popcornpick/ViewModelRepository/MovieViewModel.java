@@ -6,7 +6,7 @@ import android.util.Log;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.harshit.popcornpick.Domain.MovieModel;
+import com.harshit.popcornpick.EntityAndDb.MovieModel;
 
 import java.util.List;
 
