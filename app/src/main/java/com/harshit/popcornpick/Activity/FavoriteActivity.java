@@ -45,22 +45,10 @@ public class FavoriteActivity extends AppCompatActivity implements OnMovieListen
         progressBar = findViewById(R.id.loadingFavouritePB);
         progressBar.setVisibility(View.VISIBLE);
         list = new ArrayList<>();
-
-
-        GetIFromDB();
         initView();
-
-
-    }
-
-    private void GetIFromDB() {
-        // GETTING ID'S FROM DB
-
-
     }
 
     private void initView() {
-
         recyclerView = findViewById(R.id.favoriteRV);
         backBtn = findViewById(R.id.backfromFavourite);
         backBtn.setOnClickListener(v->finish());
