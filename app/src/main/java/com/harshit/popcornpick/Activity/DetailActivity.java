@@ -18,6 +18,8 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.harshit.popcornpick.Domain.Crediantials;
 import com.harshit.popcornpick.Domain.Detail;
+import com.harshit.popcornpick.Domain.FavDB;
+import com.harshit.popcornpick.Domain.FavEntity;
 import com.harshit.popcornpick.Domain.Genre;
 import com.harshit.popcornpick.Domain.MovieModel;
 import com.harshit.popcornpick.Helper.AppExecutors;
@@ -52,7 +54,7 @@ public class DetailActivity extends AppCompatActivity {
         fetchMovie();
         favoriteIMG.setOnClickListener(v->{
             // ADD FAVORITE FROM HERE
-
+            FavDB.getInstance(getApplicationContext()).getFavDao().insert(new FavEntity(movieID));
         });
 
 

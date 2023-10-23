@@ -15,6 +15,8 @@ import com.harshit.popcornpick.Adapter.FavouriteAdapter;
 import com.harshit.popcornpick.Adapter.OnMovieListener;
 import com.harshit.popcornpick.Domain.Crediantials;
 import com.harshit.popcornpick.Domain.Detail;
+import com.harshit.popcornpick.Domain.FavDB;
+import com.harshit.popcornpick.Domain.FavEntity;
 import com.harshit.popcornpick.Helper.SingeltonRetrofit;
 import com.harshit.popcornpick.R;
 
@@ -64,9 +66,10 @@ public class FavoriteActivity extends AppCompatActivity implements OnMovieListen
         backBtn.setOnClickListener(v->finish());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list.add(299054);
-        list.add(575264);
-        list.add(926393);
+        List<FavEntity> favEntities = FavDB.getInstance(getApplicationContext()).getFavDao().getAll();
+        for(FavEntity fav:favEntities){
+            list.add(fav.getMovie_id());
+        }
 
 //        This list is for fetching the ids from the favourite (FIREBASE)
         List<Detail> favouriteList = new ArrayList<>();
