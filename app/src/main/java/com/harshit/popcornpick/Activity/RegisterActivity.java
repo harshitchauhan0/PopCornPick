@@ -70,6 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void updateName(String name) {
         FirebaseUser user = auth.getCurrentUser();
         if(user!=null){
+            user.sendEmailVerification();
             UserProfileChangeRequest userProfileChangeRequest = new UserProfileChangeRequest.Builder().setDisplayName(name).build();
             try {
                 user.updateProfile(userProfileChangeRequest).addOnSuccessListener(new OnSuccessListener<Void>() {
