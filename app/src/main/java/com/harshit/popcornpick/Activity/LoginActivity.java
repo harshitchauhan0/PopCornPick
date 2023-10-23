@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.harshit.popcornpick.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -67,5 +68,14 @@ public class LoginActivity extends AppCompatActivity {
         loginBTN = findViewById(R.id.loginBTN);
         emailET = findViewById(R.id.editTextUserEmailLogIN);
         passwordET = findViewById(R.id.editTextPassWord);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(firebaseUser !=null){
+            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+        }
     }
 }
