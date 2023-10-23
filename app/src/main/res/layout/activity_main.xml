@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:background="@drawable/img"
+    android:background="@drawable/img_2"
     tools:context=".Activity.MainActivity">
 
     <ScrollView
