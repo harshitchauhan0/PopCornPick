@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.harshit.popcornpick.EntityAndDb.Detail;
+import com.harshit.popcornpick.EntityAndDb.FavDB;
+import com.harshit.popcornpick.EntityAndDb.FavEntity;
 import com.harshit.popcornpick.R;
 
 import java.util.ArrayList;
@@ -45,7 +47,7 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.MyVi
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.favourite_item,parent,false);
-        return new MyViewHolder(view,onMovieListener);
+        return new MyViewHolder(view, onMovieListener);
     }
 
     @Override
@@ -55,6 +57,11 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.MyVi
         Glide.with(context).load("https://image.tmdb.org/t/p/w500/"+detail.getPosterPath())
                 .into(holder.imageView);
         holder.starsTv.setText(String.valueOf(detail.getVoteAverage()));
+        holder.del_imageView.setOnClickListener((v)->{
+            Favouritelist.remove(position);
+            FavDB.getInstance(context.getApplicationContext()).getFavDao().delete(new FavEntity(detail.getId()));
+            notifyDataSetChanged();
+        });
     }
 
     @Override
@@ -63,7 +70,7 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.MyVi
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private ImageView imageView;
+        private ImageView imageView,del_imageView;
         private TextView textView,starsTv;
 
         OnMovieListener onMovieListener;
@@ -75,7 +82,8 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.MyVi
             imageView = itemView.findViewById(R.id.favoriteImageView);
             textView = itemView.findViewById(R.id.favoriteMovieName);
             starsTv = itemView.findViewById(R.id.Favouritestar);
-            itemView.setOnClickListener(this);
+            textView.setOnClickListener(this);
+            del_imageView = itemView.findViewById(R.id.del_from_fav);
         }
 
         public void onClick(View v) {

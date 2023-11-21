@@ -59,4 +59,16 @@
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.692" />
+
+    <ImageView
+        android:id="@+id/del_from_fav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        android:layout_margin="25dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
